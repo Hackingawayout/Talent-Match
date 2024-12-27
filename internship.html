@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Application</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon1.jpg" type="image/jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>AOS.init();</script>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('internship_bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: rgb(2, 2, 2);
+            font-family: 'Roboto', sans-serif;
+        }
+    
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            color: white;
+        }
+    
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+    
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+    
+        .navbar h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+    
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 10px auto; /* Reduced margin */
+            padding: 20px;
+            background-color: rgba(149, 149, 149, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+    
+        .container h2 {
+            text-align: center;
+            margin-bottom: 10px; /* Adjusted spacing */
+        }
+    
+        #search-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 5px auto; /* Reduced vertical margin */
+            max-width: 600px;
+        }
+    
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+    
+        input[type="text"]:focus {
+            border-color: #007bff;
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+        }
+    
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+    
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+    
+        .form-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px 40px; /* 40px horizontal space, 5px vertical space */
+            justify-content: space-between;
+        }
+    
+        .form-group {
+            flex: 1 1 45%;
+            margin-bottom: 10px; /* Reduced vertical space */
+        }
+    
+        .form-group label {
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: block;
+            font-size: x-large;
+            font-weight: 100;
+            color: rgb(0, 0, 0);
+        }
+    
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 15px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            font-size: 16px;
+            background-color: #f8f9fa;
+            color: #495057;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            outline: none;
+            transition: all 0.3s ease;
+        }
+    
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+    
+        .form-group button {
+            background-color: #567acb;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+    
+        .form-group button:hover {
+            background-color: #3456a1;
+            transform: scale(1.05);
+        }
+    
+        .footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            margin-top: 240px;
+        }
+
+        .companies-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .company-card {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+        }
+        
+        .company-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        .company-card h3 {
+            margin: 15px 0 10px;
+            font-size: 1.5em;
+        }
+        
+        .company-card p {
+            margin: 10px 0;
+            font-size: 1em;
+            color: #666;
+        }
+        
+        .company-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .company-card a:hover {
+            background-color: #0056b3;
+        }
+
+        .back-button{
+            margin-left: 900px;
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <h1>TalentMatch</h1>
+        <a href="logout.html">Logout</a>
+    </div>
+
+    <div id="search-container">
+        <input type="text" id="company-input" placeholder="Enter company name" oninput="showSuggestions()">
+        <button onclick="checkInternship()">Search</button>
+    </div>
+    <ul id="suggestions" class="suggestions"></ul>
+
+    <div id="result"></div>
+
+    <div id="result"></div>
+    <!-- Main Container -->
+    <div class="container">
+        <h2>Internship Application</h2>
+
+        <!-- Internship Application Form -->
+        <form id="internship-form">
+            <div class="form-container">
+                <!-- Personal Information Section -->
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="fullName" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn Profile</label>
+                    <input type="url" id="linkedin" name="linkedin" placeholder="Enter LinkedIn profile URL (optional)">
+                </div>
+                <div class="form-group">
+                    <label for="location">Location of Interest</label>
+                    <select id="location" name="location" required>
+                        <option value="remote">Remote</option>
+                        <option value="onsite">On-site</option>
+                        <option value="specific-cities">Specific Cities</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="job-area">Job Area</label>
+                    <select id="job-area" name="jobArea" required>
+                        <option value="web-development">Web Development</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="data-science">Data Science</option>
+                        <option value="design">Design</option>
+                        <option value="sales">Sales</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="internship-duration">Preferred Internship Duration</label>
+                    <select id="internship-duration" name="internshipDuration" required>
+                        <option value="3-months">3 Months</option>
+                        <option value="6-months">6 Months</option>
+                        <option value="full-time">Full Time</option>
+                    </select>
+                </div>                
+
+                <!-- Resume Upload Section -->
+                <div class="form-group">
+                    <label for="resume">Upload Resume (PDF, DOC, DOCX)</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" >
+                </div>
+
+                <div class="form-group">
+                    <label for="cover-letter">Upload Cover Letter (Optional)</label>
+                    <input type="file" id="cover-letter" name="cover-letter" accept=".pdf,.doc,.docx">
+                </div>
+
+                <div class="form-group">
+                    <label for="additional-documents">Upload Additional Documents (Optional)</label>
+                    <input type="file" id="additional-documents" name="additional-documents" accept=".pdf,.doc,.docx">
+                </div>
+
+                <!-- Skills Section -->
+                <div class="form-group">
+                    <label for="skills">Skills</label>
+                    <select id="skills" name="skills" required>
+                        <option value="java">Java</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="html-css">HTML & CSS</option>
+                        <option value="react">React</option>
+                        <option value="angular">Angular</option>
+                        <option value="nodejs">Node.js</option>
+                        <option value="typescript">TypeScript</option>
+                        <option value="c-sharp">C#</option>
+                        <option value="c-plus-plus">C++</option>
+                        <option value="php">PHP</option>
+                        <option value="ruby">Ruby</option>
+                        <option value="swift">Swift</option>
+                        <option value="kotlin">Kotlin</option>
+                        <option value="r">R</option>
+                        <option value="sql">SQL</option>
+                        <option value="nosql">NoSQL</option>
+                        <option value="machine-learning">Machine Learning</option>
+                        <option value="deep-learning">Deep Learning</option>
+                        <option value="data-science">Data Science</option>
+                        <option value="data-analysis">Data Analysis</option>
+                        <option value="ui-ux">UI/UX Design</option>
+                        <option value="figma">Figma</option>
+                        <option value="adobe-xd">Adobe XD</option>
+                        <option value="docker">Docker</option>
+                        <option value="kubernetes">Kubernetes</option>
+                        <option value="aws">AWS</option>
+                        <option value="azure">Azure</option>
+                        <option value="google-cloud">Google Cloud</option>
+                        <option value="devops">DevOps</option>
+                        <option value="blockchain">Blockchain</option>
+                        <option value="cybersecurity">Cybersecurity</option>
+                        <option value="ethical-hacking">Ethical Hacking</option>
+                        <option value="artificial-intelligence">Artificial Intelligence</option>
+                        <option value="computer-vision">Computer Vision</option>
+                        <option value="natural-language-processing">Natural Language Processing</option>
+                        <option value="game-development">Game Development</option>
+                        <option value="unity">Unity</option>
+                        <option value="unreal-engine">Unreal Engine</option>
+                        <option value="iot">IoT (Internet of Things)</option>
+                        <option value="robotics">Robotics</option>
+                        <option value="ar-vr">AR/VR (Augmented and Virtual Reality)</option>
+                        <option value="testing">Software Testing</option>
+                        <option value="project-management">Project Management</option>
+                        <option value="git">Git/GitHub</option>                        
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit"><i class="fas fa-check-circle"></i> Submit Application</button>
+                </div>
+            </div>
+        </form>        
+        </div>
+        <div id="spinner" style="display: none;">Loading...</div>
+        <button class="back-button" onclick="goBack()">Back to Search</button>
+
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 TalentMatch. All rights reserved.</p>
+        <p>
+            <a href="terms.html">Terms of Service</a> | 
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="contact.html">Contact Us</a>
+        </p>
+    </div>
+    <!-- <script>
+        document.getElementById('internship-form').addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const applicantData = Object.fromEntries(formData.entries());
+
+            const requiredFields = ['fullName', 'email', 'phone', 'location', 'jobArea', 'internshipDuration'];
+            for (const field of requiredFields) {
+                if (!applicantData[field]) {
+                    alert(`Please fill out the required field: ${field}`);
+                    return;
+                }
+            }
+
+            try {
+                const response = await fetch('http://localhost:5500/api/applicants', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(applicantData),
+                });
+
+                const data = await response.json();
+                if (data.success) {
+                    alert('Application submitted successfully!');
+                } else {
+                    alert(`Failed to submit application: ${data.message}`);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while submitting the application.');
+            }
+        });
+    </script> -->
+    <script>
+        async function checkInternship() {
+            const input = document.getElementById("company-input").value.trim();
+            const resultDiv = document.getElementById("result");
+        
+            if (!input) {
+                resultDiv.innerHTML = "<p>Please enter a company name.</p>";
+                return;
+            }
+        
+            try {
+                const response = await fetch(`http://localhost:5500/api/companies?name=${encodeURIComponent(input)}`);
+                const data = await response.json();
+        
+                if (!data.success) {
+                    resultDiv.innerHTML = `<p>${input} is not offering any internships at the moment.</p>`;
+                    return;
+                }
+        
+                const { img, title, description, link, isAvailable } = data.company;
+        
+                resultDiv.innerHTML = `
+                    <div class="company-card">
+                        <img src="${img}" alt="${title} Logo">
+                        <h3>${title}</h3>
+                        <p>${description}</p>
+                        <p>${isAvailable ? "Currently Available" : "Not Available"}</p>
+                        <a href="${link}" target="_blank">Learn More</a>
+                    </div>
+                `;
+            } catch (error) {
+                console.error("Error fetching company details:", error);
+                resultDiv.innerHTML = "<p>An error occurred while searching for the company.</p>";
+            }
+        }        
+    </script>
+    <script>
+        document.getElementById('internship-form').addEventListener('submit', async function (event) {
+            event.preventDefault();
+        
+            const formData = new FormData(event.target);
+            const applicantData = Object.fromEntries(formData.entries());
+        
+            try {
+                const response = await fetch('http://localhost:5500/api/applicants', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(applicantData),
+                });
+        
+                const data = await response.json();
+                if (data.success) {
+                    alert('Application submitted successfully!');
+                } else {
+                    alert('Failed to submit application: ' + data.message);
+                }
+            } catch (error) {
+                console.error('Error submitting application:', error);
+                alert('An error occurred while submitting the application.');
+            }
+        });        
+    </script>
+    <script>
+        document.getElementById('internship-form').addEventListener('submit', async function (event) {
+            event.preventDefault();
+        
+            const fullName = document.getElementById('full-name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+        
+            if (!fullName || !email || !phone) {
+                alert('Please fill out all required fields.');
+                return;
+            }
+        
+            const formData = new FormData(event.target);
+            const applicantData = Object.fromEntries(formData.entries());
+        
+            try {
+                const response = await fetch('http://localhost:5500/api/applicants', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(applicantData),
+                });
+        
+                const data = await response.json();
+                if (data.success) {
+                    alert('Application submitted successfully!');
+                } else {
+                    alert('Failed to submit application: ' + data.message);
+                }
+            } catch (error) {
+                console.error('Error submitting application:', error);
+                alert('An error occurred while submitting the application.');
+            }
+        });        
+    </script>
+    <script>
+        document.getElementById("internship-form").addEventListener("submit", async function (event) {
+            event.preventDefault();
+          
+            const formData = new FormData(event.target);
+            const applicantData = Object.fromEntries(formData.entries());
+          
+            try {
+              const response = await fetch("http://localhost:5500/api/applicants", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(applicantData),
+              });
+          
+              const data = await response.json();
+              if (data.success) {
+                alert("Application submitted successfully!");
+              } else {
+                alert("Failed to submit application: " + data.message);
+              }
+            } catch (error) {
+              console.error("Error submitting application:", error);
+              alert("An error occurred while submitting the application.");
+            }
+          });
+             
+    </script>
+</body>
+</html>

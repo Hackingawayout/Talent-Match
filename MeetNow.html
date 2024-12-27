@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Meet</title>
+  <link rel="icon" href="favicon1.jpg" type="image/jpg">
+  <style>
+    #meet-container {
+      height: 800px;
+      width: 100%;
+      border: 7px solid #ccc;
+    }
+    #meet-now-btn{
+        color: white;
+        background-color: green;
+        margin-left: 950px;
+        font-size: 40px;
+    }
+  </style>
+</head>
+<body>
+  <button id="meet-now-btn">Meet Now</button>
+  <div id="meet-container"></div>
+
+  <script src="https://meet.jit.si/external_api.js"></script>
+  <script>
+    // When the Meet Now button is clicked, initiate a video call
+    document.getElementById("meet-now-btn").onclick = function() {
+      const domain = "meet.jit.si"; // Jitsi Meet domain
+      const options = {
+        roomName: "MyMeetingRoom", // Room name; you can generate unique rooms for each user or session
+        width: "100%",
+        height: "100%",
+        parentNode: document.getElementById("meet-container"),
+        configOverwrite: {
+          startWithAudioMuted: false,
+          startWithVideoMuted: false
+        },
+        interfaceConfigOverwrite: {
+          filmStripOnly: false
+        }
+      };
+
+      // Create a new Jitsi Meet API instance with the given options
+      const api = new JitsiMeetExternalAPI(domain, options);
+    };
+  </script>
+</body>
+</html>

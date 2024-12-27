@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join a Project</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon1.jpg" type="image/jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: url('project_bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: rgb(255, 255, 255);    
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .main-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .search-filter {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .search-filter input,
+        .search-filter select,
+        .search-filter button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-filter input {
+            flex: 2;
+        }
+
+        .search-filter select {
+            flex: 1;
+        }
+
+        .search-filter button {
+            flex: 0.5;
+            background-color: #567acb;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-filter button:hover {
+            background-color: #3456a1;
+        }
+
+        .project-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            width: 300px;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .card-description {
+            font-size: 14px;
+        }
+
+        .card-buttons {
+            margin-top: auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .card-buttons button,
+        .view-more-button,
+        .join-now-button {
+            flex: 1;
+            padding: 8px;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            background-color: #567acb;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .card-buttons button:hover,
+        .view-more-button:hover,
+        .join-now-button:hover {
+            background-color: #3456a1;
+            transform: scale(1.05);
+        }
+
+        .back-to-search-button {
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #567acb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .back-to-search-button:hover {
+            background-color: #3456a1;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .footer a {
+            color: #567acb;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="search.html">Home</a>
+        <h1>TalentMatch</h1>
+        <a href="home.html">Logout</a>
+    </div>
+
+    <div class="main-container">
+        <h2>Join a Project</h2>
+        <p>Browse and find exciting projects to collaborate on.</p>
+
+        <div class="search-filter">
+            <input type="text" id="searchInput" placeholder="Search projects...">
+            <select>
+                <option value="">Category</option>
+                <option value="technology">Technology</option>
+                <option value="marketing">Marketing</option>
+                <option value="design">Design</option>
+            </select>
+            <button>Search</button>
+        </div>
+
+        <div class="project-cards">
+            <div class="card">
+                <img src="chatBot.jpg" alt="Project Image">
+                <div class="card-content">
+                    <div class="card-title">AI Chatbot Development</div>
+                    <div class="card-description">Collaborate on building an AI chatbot for customer service.</div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- Example Card 2 -->
+            <div class="card">
+                <img src="New_web_app.jpg" alt="Project Image">
+                <div class="card-content">
+                    <div class="card-title">Web App for Productivity</div>
+                    <div class="card-description">
+                        Build a web app to help users track their daily tasks.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Card 3 -->
+            <div class="card">
+                <img src="health_app.jpg" alt="Project Image">
+                <div class="card-content">
+                    <div class="card-title">Health Monitoring App</div>
+                    <div class="card-description">
+                        Develop an app to monitor vital health parameters.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Card 4 -->
+            <div class="card">
+                <img src="ecommerce.jpg" alt="Project Image">
+                <div class="card-content">
+                    <div class="card-title">E-commerce Platform</div>
+                    <div class="card-description">
+                        Help design a scalable e-commerce platform for small businesses.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Card 5 -->
+            <div class="card">
+                <img src="education_tool.jpg" alt="Project Image">
+                <div class="card-content">
+                    <div class="card-title">Educational Tool</div>
+                    <div class="card-description">
+                        Work on an interactive tool for e-learning platforms.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Card 6 -->
+            <div class="card">
+                <img src="finance_tracker.jpg" alt="Project Image">
+                <div class="card-content">
+                    <div class="card-title">Personal Finance Tracker</div>
+                    <div class="card-description">
+                        Create a tool to manage personal expenses and budgets.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Card 7 -->
+            <div class="card">
+                <img src="travel_planner.jpg" alt="Project Image">
+                <div class="card-content">
+                    <div class="card-title">Travel Planner</div>
+                    <div class="card-description">
+                        Build a travel planner app to organize trips efficiently.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Card 8 -->
+            <div class="card">
+                <img src="music_streaming.jpg" alt="Project Image">
+                <div class="card-content">
+                    <div class="card-title">Music Streaming Service</div>
+                    <div class="card-description">
+                        Join a team to create a new music streaming platform.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="display:none;">
+                <img src="voiceSmartMirror.jpg" alt="Voice-Controlled Smart Mirror">
+                <div class="card-content">
+                    <div class="card-title">Voice-Controlled Smart Mirror</div>
+                    <div class="card-description">
+                        Build a smart mirror that displays the date, time, weather, calendar events, and news updates. Integrate voice commands for added interactivity.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="display:none;">
+                <img src="collaborativeWhiteboard.jpg" alt="Collaborative Whiteboard Tool">
+                <div class="card-content">
+                    <div class="card-title">Collaborative Whiteboard Tool</div>
+                    <div class="card-description">
+                        Develop an online whiteboard for teams to brainstorm, sketch, and collaborate in real time with drawing tools, sticky notes, and chat features.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="display:none;">
+                <img src="virtualCloset.jpg" alt="Virtual Closet Organizer">
+                <div class="card-content">
+                    <div class="card-title">Virtual Closet Organizer</div>
+                    <div class="card-description">
+                        Create an app where users can catalog their wardrobe, plan outfits, and get AI-generated outfit suggestions for events or weather.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="display:none;">
+                <img src="disasterManagementApp.jpg" alt="Disaster Management App">
+                <div class="card-content">
+                    <div class="card-title">Disaster Management App</div>
+                    <div class="card-description">
+                        Design an app that provides real-time updates on natural disasters, emergency services, and evacuation plans in a user’s area.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="display:none;">
+                <img src="fitnessGamificationApp.jpg" alt="Fitness Gamification App">
+                <div class="card-content">
+                    <div class="card-title">Fitness Gamification App</div>
+                    <div class="card-description">
+                        Develop a fitness app that turns workouts into a game. Users can earn points, unlock levels, and compete with friends for staying active.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="display:none;">
+                <img src="aiRecipeGenerator.jpg" alt="AI-Based Recipe Generator">
+                <div class="card-content">
+                    <div class="card-title">AI-Based Recipe Generator</div>
+                    <div class="card-description">
+                        Build an app that suggests recipes based on the ingredients available at home. Add features for meal planning and grocery list generation.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="display:none;">
+                <img src="crowdsourcedReviewPlatform.jpg" alt="Crowdsourced Review Platform">
+                <div class="card-content">
+                    <div class="card-title">Crowdsourced Review Platform</div>
+                    <div class="card-description">
+                        Create a platform where users review and rate niche categories like local parks, public transport, or coworking spaces.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="display:none;">
+                <img src="educationalVRApp.jpg" alt="Educational VR Application">
+                <div class="card-content">
+                    <div class="card-title">Educational VR Application</div>
+                    <div class="card-description">
+                        Develop a VR experience that teaches a topic, like a historical event, anatomy, or space exploration, in an immersive and interactive way.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="display:none;">
+                <img src="iotPetFeeder.jpg" alt="IoT Pet Feeder">
+                <div class="card-content">
+                    <div class="card-title">IoT Pet Feeder</div>
+                    <div class="card-description">
+                        Design a smart pet feeder controlled via a mobile app. Include features like scheduled feeding times and live video feeds.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="display:none;">
+                <img src="customNewsAggregator.jpg" alt="Custom News Aggregator">
+                <div class="card-content">
+                    <div class="card-title">Custom News Aggregator</div>
+                    <div class="card-description">
+                        Build a news aggregator that curates stories based on user preferences, sentiment analysis, or even geographical locations.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>    
+            
+            <div class="card" style="display:none;">
+                <img src="habitTrackerAI.jpg" alt="Habit Tracker with AI Insights">
+                <div class="card-content">
+                    <div class="card-title">Habit Tracker with AI Insights</div>
+                    <div class="card-description">
+                        Develop a mobile app to help users track habits. Use AI to analyze their progress and provide suggestions for improvement based on patterns.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="display:none;">
+                <img src="aiMusicGenerator.jpg" alt="AI Music Generator">
+                <div class="card-content">
+                    <div class="card-title">AI Music Generator</div>
+                    <div class="card-description">
+                        Create a tool that generates custom music tracks based on a user’s mood, genre preferences, or lyrics they input.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="display:none;">
+                <img src="iotHomeEnergyMonitor.jpg" alt="IoT Home Energy Monitor">
+                <div class="card-content">
+                    <div class="card-title">IoT Home Energy Monitor</div>
+                    <div class="card-description">
+                        Design a system that monitors and reports energy usage in real time for home appliances. Include a mobile app to visualize data and suggest energy-saving tips.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="display:none;">
+                <img src="arShoppingApp.jpg" alt="Augmented Reality (AR) Shopping App">
+                <div class="card-content">
+                    <div class="card-title">Augmented Reality (AR) Shopping App</div>
+                    <div class="card-description">
+                        Build an app that allows users to visualize products (like furniture or decor) in their own space using augmented reality.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="display:none;">
+                <img src="microLearningPlatform.jpg" alt="Micro-Learning Platform">
+                <div class="card-content">
+                    <div class="card-title">Micro-Learning Platform</div>
+                    <div class="card-description">
+                        Develop a platform for bite-sized learning modules on various topics, with daily quizzes or challenges to reinforce knowledge.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="display:none;">
+                <img src="personalPortfolioBuilder.jpg" alt="Personal Portfolio Builder">
+                <div class="card-content">
+                    <div class="card-title">    </div>
+                    <div class="card-description">
+                        Create a tool that helps professionals automatically generate a sleek personal portfolio website from their LinkedIn profile or resume.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="display:none;">
+                <img src="crowdfundingPlatform.jpg" alt="Crowdfunding Platform for Local Projects">
+                <div class="card-content">
+                    <div class="card-title">Crowdfunding Platform for Local Projects</div>
+                    <div class="card-description">
+                        Develop a platform for crowdfunding small, community-based projects, like building parks, supporting local businesses, or hosting events.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="display:none;">
+                <img src="realTimeMultiplayerGame.jpg" alt="Real-Time Multiplayer Game">
+                <div class="card-content">
+                    <div class="card-title">Real-Time Multiplayer Game</div>
+                    <div class="card-description">
+                        Design a simple multiplayer game with real-time interaction, such as a trivia competition or a collaborative maze-solving challenge.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="display:none;">
+                <img src="environmentalImpactCalculator.jpg" alt="Environmental Impact Calculator">
+                <div class="card-content">
+                    <div class="card-title">Environmental Impact Calculator</div>
+                    <div class="card-description">
+                        Create a web or mobile app where users can calculate their carbon footprint and get actionable suggestions for reducing it.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="display: none;">
+                <img src="aiStudyBuddy.jpg" alt="AI-Powered Study Buddy">
+                <div class="card-content">
+                    <div class="card-title">AI-Powered Study Buddy</div>
+                    <div class="card-description">
+                        Build an AI assistant to help students with their studies by answering questions, creating study schedules, and quizzing them on topics.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <a href="search.html" class="back-to-search-button">Back to Search</a>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 TalentMatch. All rights reserved.</p>
+        <p>
+            <a href="terms.html">Terms of Service</a> | 
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="contact.html">Contact Us</a>
+        </p>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const projectCards = document.querySelectorAll('.card');
+
+        searchInput.addEventListener('input', async () => {
+            const searchTerm = searchInput.value.toLowerCase();
+
+            if (searchTerm.trim() === "") {
+                // Show default cards if search input is empty
+                projectCards.forEach(card => {
+                    card.style.display = 'block';
+                });
+                return;
+            }
+
+            try {
+                const response = await fetch(`http://localhost:5500/api/projects?search=${encodeURIComponent(searchTerm)}`);
+                const data = await response.json();
+
+                if (data.success && data.projects.length > 0) {
+                    const projectContainer = document.querySelector(".project-cards");
+                    projectContainer.innerHTML = ""; // Clear existing cards
+
+                    data.projects.forEach(project => {
+                        const card = document.createElement("div");
+                        card.className = "card";
+                        card.innerHTML = `
+                            <div class="card-content">
+                                <div class="card-title">${project.projectName}</div>
+                                <div class="card-description">${project.projectDescription}</div>
+                                <div class="card-buttons">
+                                    <a href="join-project-form.html" class="join-now-button">Join Now</a>
+                                </div>
+                            </div>
+                        `;
+                        projectContainer.appendChild(card);
+                    });
+                } else {
+                    // No results: show default cards
+                    projectCards.forEach(card => {
+                        card.style.display = 'block';
+                    });
+                }
+            } catch (error) {
+                console.error("Error fetching projects:", error);
+                alert("Error fetching projects. Please try again.");
+            }
+        });
+
+        // Keep default cards visible on page load
+        window.onload = () => {
+            projectCards.forEach(card => {
+                card.style.display = 'block';
+            });
+        };
+
+
+    </script>
+</body>
+</html>

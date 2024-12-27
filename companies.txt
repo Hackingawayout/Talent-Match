@@ -1,0 +1,286 @@
+
+
+<div class="companies-container">
+            <div class="company-card">
+                <img src="google.jpg" alt="Google Logo">
+                <h3>Google</h3>
+                <p>Internship in Technology</p>
+                <a href="https://google.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="microsoft.jpg" alt="Microsoft Logo">
+                <h3>Microsoft</h3>
+                <p>Internship in Technology</p>
+                <a href="https://microsoft.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="apple.jpg" alt="Apple Logo">
+                <h3>Apple</h3>
+                <p>Internship in Technology</p>
+                <a href="https://apple.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="amazon.jpg" alt="Amazon Logo">
+                <h3>Amazon</h3>
+                <p>Internship in E-commerce</p>
+                <a href="https://amazon.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="facebook.jpg" alt="Facebook Logo">
+                <h3>Facebook</h3>
+                <p>Internship in Social Media</p>
+                <a href="https://facebook.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="ibm.jpg" alt="IBM Logo">
+                <h3>IBM</h3>
+                <p>Internship in Technology</p>
+                <a href="https://ibm.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="intel.jpg" alt="Intel Logo">
+                <h3>Intel</h3>
+                <p>Internship in Semiconductor</p>
+                <a href="https://intel.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="adobe.jpg" alt="Adobe Logo">
+                <h3>Adobe</h3>
+                <p>Internship in Creative Solutions</p>
+                <a href="https://adobe.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="netflix.jpg" alt="Netflix Logo">
+                <h3>Netflix</h3>
+                <p>Internship in Entertainment</p>
+                <a href="https://netflix.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="tesla.jpg" alt="Tesla Logo">
+                <h3>Tesla</h3>
+                <p>Internship in Automotive</p>
+                <a href="https://tesla.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="linkedin.jpg" alt="LinkedIn Logo">
+                <h3>LinkedIn</h3>
+                <p>Internship in Networking</p>
+                <a href="https://linkedin.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="salesforce.jpg" alt="Salesforce Logo">
+                <h3>Salesforce</h3>
+                <p>Internship in CRM</p>
+                <a href="https://salesforce.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="twitter.jpg" alt="Twitter Logo">
+                <h3>Twitter</h3>
+                <p>Internship in Social Media</p>
+                <a href="https://twitter.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="oracle.jpg" alt="Oracle Logo">
+                <h3>Oracle</h3>
+                <p>Internship in Database</p>
+                <a href="https://oracle.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="sap.jpg" alt="SAP Logo">
+                <h3>SAP</h3>
+                <p>Internship in Enterprise Software</p>
+                <a href="https://sap.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="cisco.jpg" alt="Cisco Logo">
+                <h3>Cisco</h3>
+                <p>Internship in Networking</p>
+                <a href="https://cisco.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="hp.jpg" alt="HP Logo">
+                <h3>HP</h3>
+                <p>Internship in Technology</p>
+                <a href="https://hp.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="dell.jpg" alt="Dell Logo">
+                <h3>Dell</h3>
+                <p>Internship in Technology</p>
+                <a href="https://dell.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="zoom.jpg" alt="Zoom Logo">
+                <h3>Zoom</h3>
+                <p>Internship in Video Conferencing</p>
+                <a href="https://zoom.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="uber.jpg" alt="Uber Logo">
+                <h3>Uber</h3>
+                <p>Internship in Transportation</p>
+                <a href="https://uber.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="spotify.jpg" alt="Spotify Logo">
+                <h3>Spotify</h3>
+                <p>Internship in Music Streaming</p>
+                <a href="https://spotify.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="redhat.jpg" alt="Red Hat Logo">
+                <h3>Red Hat</h3>
+                <p>Internship in Open Source</p>
+                <a href="https://redhat.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="qualcomm.jpg" alt="Qualcomm Logo">
+                <h3>Qualcomm</h3>
+                <p>Internship in Telecommunications</p>
+                <a href="https://qualcomm.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="nvidia.jpg" alt="Nvidia Logo">
+                <h3>Nvidia</h3>
+                <p>Internship in Graphics</p>
+                <a href="https://nvidia.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="snapchat.jpg" alt="Snapchat Logo">
+                <h3>Snapchat</h3>
+                <p>Internship in Social Media</p>
+                <a href="https://snapchat.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="pinterest.jpg" alt="Pinterest Logo">
+                <h3>Pinterest</h3>
+                <p>Internship in Social Media</p>
+                <a href="https://pinterest.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="dropbox.jpg" alt="Dropbox Logo">
+                <h3>Dropbox</h3>
+                <p>Internship in Cloud Storage</p>
+                <a href="https://dropbox.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="shopify.jpg" alt="Shopify Logo">
+                <h3>Shopify</h3>
+                <p>Internship in E-commerce</p>
+                <a href="https://shopify.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="github.jpg" alt="GitHub Logo">
+                <h3>GitHub</h3>
+                <p>Internship in Open Source</p>
+                <a href="https://github.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="slack.jpg" alt="Slack Logo">
+                <h3>Slack</h3>
+                <p>Internship in Communication</p>
+                <a href="https://slack.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="vmware.jpg" alt="VMware Logo">
+                <h3>VMware</h3>
+                <p>Internship in Virtualization</p>
+                <a href="https://vmware.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="airbnb.jpg" alt="Airbnb Logo">
+                <h3>Airbnb</h3>
+                <p>Internship in Hospitality</p>
+                <a href="https://airbnb.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="stripe.jpg" alt="Stripe Logo">
+                <h3>Stripe</h3>
+                <p>Internship in Payments</p>
+                <a href="https://stripe.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="square.jpg" alt="Square Logo">
+                <h3>Square</h3>
+                <p>Internship in Payments</p>
+                <a href="https://square.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="paypal.jpg" alt="PayPal Logo">
+                <h3>PayPal</h3>
+                <p>Internship in Payments</p>
+                <a href="https://paypal.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="coinbase.jpg" alt="Coinbase Logo">
+                <h3>Coinbase</h3>
+                <p>Internship in Cryptocurrency</p>
+                <a href="https://coinbase.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="tiktok.jpg" alt="TikTok Logo">
+                <h3>TikTok</h3>
+                <p>Internship in Social Media</p>
+                <a href="https://tiktok.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="alibaba.jpg" alt="Alibaba Logo">
+                <h3>Alibaba</h3>
+                <p>Internship in E-commerce</p>
+                <a href="https://alibaba.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="baidu.jpg" alt="Baidu Logo">
+                <h3>Baidu</h3>
+                <p>Internship in AI</p>
+                <a href="https://baidu.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="tencent.jpg" alt="Tencent Logo">
+                <h3>Tencent</h3>
+                <p>Internship in Technology</p>
+                <a href="https://tencent.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="meta.jpg" alt="Meta Logo">
+                <h3>Meta</h3>
+                <p>Internship in Social Media</p>
+                <a href="https://meta.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="mastercard.jpg" alt="MasterCard Logo">
+                <h3>MasterCard</h3>
+                <p>Internship in Payments</p>
+                <a href="https://mastercard.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="infosys.jpg" alt="Infosys Logo">
+                <h3>Infosys</h3>
+                <p>Internship in Technology</p>
+                <a href="https://infosys.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="tcs.jpg" alt="TCS Logo">
+                <h3>TCS</h3>
+                <p>Internship in Technology</p>
+                <a href="https://tcs.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="openai.jpg" alt="OpenAI Logo">
+                <h3>OpenAI</h3>
+                <p>Internship in AI</p>
+                <a href="https://openai.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="spacex.jpg" alt="SpaceX Logo">
+                <h3>SpaceX</h3>
+                <p>Internship in Aerospace</p>
+                <a href="https://spacex.com">Apply Now</a>
+            </div>
+            <div class="company-card">
+                <img src="googleai.jpg" alt="Google AI Logo">
+                <h3>Google AI</h3>
+                <p>Internship in AI</p>
+                <a href="https://ai.google">Apply Now</a>
+            </div>
+            
