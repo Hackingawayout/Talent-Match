@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Ideas</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon1.jpg" type="image/jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('startup_bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+     
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;  /* Adds space from the top of the page */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            color: black;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Idea Submission Form */
+        .submit-idea {
+            margin-bottom: 30px;
+        }
+
+        .submit-idea input, .submit-idea textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .submit-idea button {
+            padding: 12px 20px;
+            background-color: #567acb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .submit-idea button:hover {
+            background-color: #3456a1;
+            transform: scale(1.05);
+        }
+
+        /* Idea Cards */
+        .idea-card {
+            background-color: rgba(255, 255, 255, 0.7);
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .idea-card h3 {
+            margin-top: 0;
+        }
+
+        .rating {
+            font-size: 20px;
+            color: #000000;
+        }
+
+        .rating input {
+            margin-right: 5px;
+        }
+
+        .idea-card textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+
+        .idea-card button {
+            padding: 12px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .idea-card button:hover {
+            background-color: #2980b9;
+        }
+
+        .footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            margin-top: auto; /* This pushes the footer to the bottom of the page */
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .back-button {
+            background-color: #567acb;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .back-button:hover {
+            background-color: #3456a1;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <h1>TalentMatch</h1>
+        <a href="logout.html">Logout</a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Main Content -->
+    <div class="container">
+        <h2>Submit and Rate Startup Ideas</h2>
+
+        <!-- Idea Submission Form -->
+        <!-- <div class="submit-idea">
+            <h3>Submit Your Idea</h3>
+            <form action="/submit-idea" method="POST">
+                <input type="text" name="idea-title" placeholder="Enter your idea title" required>
+                <textarea name="idea-description" placeholder="Describe your idea" required></textarea>
+                <input type="text" name="industry" placeholder="Industry/Category (e.g., Tech, Healthcare)" required>
+                <input type="text" name="target-audience" placeholder="Target Audience (optional)">
+                <button type="submit">Submit Idea</button>
+            </form>
+        </div> -->
+        <form id="startup-form">
+            <div>
+              <label for="title">Title</label>
+              <input type="text" id="title" name="title" required placeholder="Enter startup idea title">
+            </div>
+            <div>
+              <label for="description">Description</label>
+              <textarea id="description" name="description" required placeholder="Describe your startup idea"></textarea>
+            </div>
+            <div>
+              <label for="industry">Industry</label>
+              <input type="text" id="industry" name="industry" required placeholder="Enter the industry">
+            </div>
+            <div>
+              <label for="targetAudience">Target Audience (Optional)</label>
+              <input type="text" id="targetAudience" name="targetAudience" placeholder="Who is your target audience?">
+            </div>
+            <button type="submit">Submit Idea</button>
+        </form>
+
+        <div id="startup-ideas-container">
+            <h2>Startup Ideas</h2>
+          
+            <!-- Default Ideas Section -->
+            <div id="default-ideas">
+              <h3>Default Ideas</h3>
+              <div class="idea-card">
+                <h3>Smart Health Tracker</h3>
+                <p>A device that tracks your health metrics in real time and suggests personalized diet plans.</p>
+                <p><strong>Category:</strong> HealthTech</p>
+                <div class="rating">
+                    <label>Rate this Idea: </label>
+                    <input type="radio" name="rating1" value="1">1
+                    <input type="radio" name="rating1" value="2">2
+                    <input type="radio" name="rating1" value="3">3
+                    <input type="radio" name="rating1" value="4">4
+                    <input type="radio" name="rating1" value="5">5
+                </div>
+                <textarea placeholder="Leave your comments..."></textarea>
+                <button>Submit Rating & Comment</button>
+            </div>
+    
+            <!-- Another Idea -->
+            <div class="idea-card">
+                <h3>Eco-Friendly Packaging Solution</h3>
+                <p>A sustainable packaging solution made from biodegradable materials.</p>
+                <p><strong>Category:</strong> Environment</p>
+                <div class="rating">
+                    <label>Rate this Idea: </label>
+                    <input type="radio" name="rating2" value="1">1
+                    <input type="radio" name="rating2" value="2">2
+                    <input type="radio" name="rating2" value="3">3
+                    <input type="radio" name="rating2" value="4">4
+                    <input type="radio" name="rating2" value="5">5
+                </div>
+                <textarea placeholder="Leave your comments..."></textarea>
+                <button>Submit Rating & Comment</button>
+            </div>
+    
+            <div class="idea-card">
+                <h3>Eco-Friendly Packaging Solution</h3>
+                <p>A sustainable packaging solution made from biodegradable materials.</p>
+                <p><strong>Category:</strong> Environment</p>
+                <div class="rating">
+                    <label>Rate this Idea: </label>
+                    <input type="radio" name="rating1" value="1">1
+                    <input type="radio" name="rating1" value="2">2
+                    <input type="radio" name="rating1" value="3">3
+                    <input type="radio" name="rating1" value="4">4
+                    <input type="radio" name="rating1" value="5">5
+                </div>
+                <textarea placeholder="Leave your comments..."></textarea>
+                <button>Submit Rating & Comment</button>
+            </div>
+            
+            <div class="idea-card">
+                <h3>Virtual Tutor App</h3>
+                <p>An AI-driven app that provides personalized learning experiences and live tutor sessions.</p>
+                <p><strong>Category:</strong> Education</p>
+                <div class="rating">
+                    <label>Rate this Idea: </label>
+                    <input type="radio" name="rating2" value="1">1
+                    <input type="radio" name="rating2" value="2">2
+                    <input type="radio" name="rating2" value="3">3
+                    <input type="radio" name="rating2" value="4">4
+                    <input type="radio" name="rating2" value="5">5
+                </div>
+                <textarea placeholder="Leave your comments..."></textarea>
+                <button>Submit Rating & Comment</button>
+            </div>
+            
+            <div class="idea-card">
+                <h3>Smart Waste Management System</h3>
+                <p>A system that uses IoT to optimize waste collection and recycling processes in urban areas.</p>
+                <p><strong>Category:</strong> Smart Cities</p>
+                <div class="rating">
+                    <label>Rate this Idea: </label>
+                    <input type="radio" name="rating3" value="1">1
+                    <input type="radio" name="rating3" value="2">2
+                    <input type="radio" name="rating3" value="3">3
+                    <input type="radio" name="rating3" value="4">4
+                    <input type="radio" name="rating3" value="5">5
+                </div>
+                <textarea placeholder="Leave your comments..."></textarea>
+                <button>Submit Rating & Comment</button>
+            </div>
+            
+            <div class="idea-card">
+                <h3>Blockchain-Based Voting System</h3>
+                <p>A secure and transparent online voting platform leveraging blockchain technology.</p>
+                <p><strong>Category:</strong> Technology</p>
+                <div class="rating">
+                    <label>Rate this Idea: </label>
+                    <input type="radio" name="rating4" value="1">1
+                    <input type="radio" name="rating4" value="2">2
+                    <input type="radio" name="rating4" value="3">3
+                    <input type="radio" name="rating4" value="4">4
+                    <input type="radio" name="rating4" value="5">5
+                </div>
+                <textarea placeholder="Leave your comments..."></textarea>
+                <button>Submit Rating & Comment</button>
+            </div>
+            
+            <div class="idea-card">
+                <h3>Green Energy Marketplace</h3>
+                <p>An online platform connecting renewable energy providers with businesses and consumers.</p>
+                <p><strong>Category:</strong> Renewable Energy</p>
+                <div class="rating">
+                    <label>Rate this Idea: </label>
+                    <input type="radio" name="rating5" value="1">1
+                    <input type="radio" name="rating5" value="2">2
+                    <input type="radio" name="rating5" value="3">3
+                    <input type="radio" name="rating5" value="4">4
+                    <input type="radio" name="rating5" value="5">5
+                </div>
+                <textarea placeholder="Leave your comments..."></textarea>
+                <button>Submit Rating & Comment</button>
+            </div>
+        </div>
+          
+            <!-- User-Submitted Ideas Section -->
+            <div id="user-ideas">
+              <h3>User-Submitted Ideas</h3>
+              <!-- User-submitted ideas will be dynamically rendered here -->
+            </div>
+          </div>
+        <div id="startup-ideas-container">
+            <h2></h2>
+            <ul id="startup-ideas-list">
+              <!-- Startup ideas will be dynamically displayed here -->
+                
+        <button class="back-button" onclick="goBack()">Back to Search</button>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 TalentMatch. All rights reserved.</p>
+        <p>
+            <a href="terms.html">Terms of Service</a> | 
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="contact.html">Contact Us</a>
+        </p>
+    </div>
+
+    <script>
+            // Default ideas to display initially
+            const defaultIdeas = [
+            {
+            title: "Eco-Friendly Packaging",
+            description: "A startup focusing on biodegradable and sustainable packaging solutions.",
+            industry: "Environment",
+            targetAudience: "E-commerce businesses",
+            },
+            {
+            title: "AI Personal Assistant",
+            description: "An AI-powered personal assistant to help with daily tasks and scheduling.",
+            industry: "Technology",
+            targetAudience: "Busy professionals",
+            },
+            ];
+
+            // Function to render a single idea card
+            function renderIdeaCard(idea, containerId) {
+            const container = document.getElementById(containerId);
+
+            const card = document.createElement("div");
+            card.classList.add("idea-card");
+
+            card.innerHTML = `
+            <h3>${idea.title}</h3>
+            <p>${idea.description}</p>
+            <p><strong>Category:</strong> ${idea.industry}</p>
+            <p><strong>Target Audience:</strong> ${idea.targetAudience || "Not specified"}</p>
+            <div class="rating">
+                <label>Rate this Idea:</label>
+                <input type="radio" name="rating-${idea.title}" value="1">1
+                <input type="radio" name="rating-${idea.title}" value="2">2
+                <input type="radio" name="rating-${idea.title}" value="3">3
+                <input type="radio" name="rating-${idea.title}" value="4">4
+                <input type="radio" name="rating-${idea.title}" value="5">5
+            </div>
+            <textarea placeholder="Leave your comments..."></textarea>
+            <button>Submit Rating & Comment</button>
+            `;
+
+            container.appendChild(card);
+            }
+
+            // Render default ideas
+            function renderDefaultIdeas() {
+            defaultIdeas.forEach((idea) => renderIdeaCard(idea, "default-ideas"));
+            }
+
+            // Fetch user-submitted ideas from the database
+            async function fetchUserIdeas() {
+            try {
+            const response = await fetch("http://localhost:5500/api/startup-ideas");
+            const data = await response.json();
+
+            if (data.success) {
+                const container = document.getElementById("user-ideas");
+                container.innerHTML = ""; // Clear old content
+
+                data.ideas.forEach((idea) => renderIdeaCard(idea, "user-ideas"));
+            }
+            } catch (error) {
+            console.error("Error fetching user ideas:", error);
+            }
+            }
+
+            // Handle form submission to add a new idea
+            document.getElementById("startup-form").addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const ideaData = Object.fromEntries(formData.entries());
+
+            try {
+            const response = await fetch("http://localhost:5500/api/startup-ideas", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(ideaData),
+            });
+
+            const data = await response.json();
+            if (data.success) {
+                alert("Idea submitted successfully!");
+
+                // Render the new idea on the screen
+                renderIdeaCard(ideaData, "user-ideas");
+            } else {
+                alert("Failed to submit the idea.");
+            }
+            } catch (error) {
+            console.error("Error submitting idea:", error);
+            }
+            });
+
+            // Initialize the page
+            document.addEventListener("DOMContentLoaded", () => {
+            renderDefaultIdeas(); // Render default ideas first
+            fetchUserIdeas();     // Fetch and render user-submitted ideas
+            });
+    
+        </script>
+</body>
+</html>
+

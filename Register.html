@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="icon" href="favicon1.jpg" type="image/jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .form-container {
+            background-color: #acdfff;
+            width: 700px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            position: relative;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .form-container h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .form-container .form-group {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="password"],
+        .form-container input[type="file"],
+        .form-container input[type="number"],
+        .form-container select {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            background-color: #ecf0f3;
+            box-shadow: inset 3px 3px 6px #b9c3cb, inset -3px -3px 6px #ffffff;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .form-container select {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            background-color: #ecf0f3;
+            box-shadow: inset 3px 3px 6px #b9c3cb, inset -3px -3px 6px #ffffff;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .form-container input::placeholder {
+            color: #999;
+            font-style: italic;
+        }
+
+        .form-container .register-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #ecf0f3;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            box-shadow: 3px 3px 6px #b9c3cb, -3px -3px 6px #ffffff;
+            transition: all 0.3s;
+        }
+
+        .form-container .register-btn:hover {
+            background-color: #d4d8dd;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+            text-align: left;
+            margin-top: -10px;
+        }
+
+        .form-container .login-text {
+            font-size: 13px;
+            color: #555;
+            margin-top: 10px;
+        }
+        
+
+        .form-container .icon {
+            width: 60px;
+            height: 60px;
+            background-color: #ecf0f3;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            box-shadow: 9px 9px 16px #b9c3cb, -9px -9px 16px #ffffff; /* Neumorphic shadow for the icon */
+        }
+        
+        .icon-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%; /* Keeps the circle shape */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="icon">
+            <img src="profile.png" alt="Profile Icon" class="icon-img">
+        </div>
+        <h2>Registration</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div style="position: relative;">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <button type="button" id="togglePassword" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 16px;">👁️</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <div style="position: relative;">
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                    <button type="button" id="toggleConfirmPassword" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 16px;">👁️</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="softSkills">Soft Skills</label>
+                <select id="softSkills" name="softSkills" multiple required>
+                    <option value="communication">Communication</option>
+                    <option value="teamwork">Teamwork</option>
+                    <option value="problem-solving">Problem Solving</option>
+                    <option value="leadership">Leadership</option>
+                    <option value="creativity">Creativity</option>
+                    <option value="adaptability">Adaptability</option>
+                    <option value="time-management">Time Management</option>
+                    <option value="critical-thinking">Critical Thinking</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="technicalSkills">Technical Skills</label>
+                <select id="technicalSkills" name="technicalSkills" multiple required>
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="java">Java</option>
+                    <option value="sql">SQL</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="c++">C++</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="php">PHP</option>
+                    <option value="react">React</option>
+                    <option value="kotlin">Kotlin</option>
+                    <option value="node.js">Node.js</option>
+                    <option value="express.js">Express.js</option>
+                    <option value="typescript">TypeScript</option>
+                    <option value="spring boot">Spring Boot</option>
+                    <option value="django">Django</option>
+                    <option value="mysql">MySQL</option>
+                    <option value="angular">Angular</option>
+                    <option value="sass">Sass</option>
+                    <option value="tensorflow">TensorFlow</option>
+                    <option value="bootstrap">Bootstrap</option>
+                    <option value="postgresql">PostgreSQL</option>
+                    <option value="pytorch">PyTorch</option>
+                    <option value="ruby on rails">Ruby on Rails</option>
+                    <option value="opencv">OpenCV</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="workExperience">Work Experience (Years)</label>
+                <input type="number" id="workExperience" name="workExperience" placeholder="Years of Experience" required>
+            </div>
+
+            <div class="form-group">
+                <label for="previousJobs">Previous Jobs</label>
+                <input type="text" id="previousJobs" name="previousJobs" placeholder="Previous Jobs" required>
+            </div>
+
+            <div class="form-group">
+                <label for="referenceLetters">Reference Letters (Optional)</label>
+                <input type="file" id="referenceLetters" name="referenceLetters" accept=".pdf,.docx">
+            </div>
+
+            <div class="form-group">
+                <label for="projects">Projects</label>
+                <input type="text" id="projects" name="projects" placeholder="Projects" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hackathons">Hackathons</label>
+                <input type="text" id="hackathons" name="hackathons" placeholder="Hackathons" required>
+            </div>
+
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", async (e) => {
+            e.preventDefault(); // Prevent default form submission
+
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return;
+            }
+
+            const formData = {
+                fullname: document.getElementById("fullname").value,
+                email: document.getElementById("email").value,
+                password,
+                phone: document.getElementById("phone").value,
+                softSkills: Array.from(document.getElementById("softSkills").selectedOptions).map(option => option.value),
+                technicalSkills: Array.from(document.getElementById("technicalSkills").selectedOptions).map(option => option.value),
+                workExperience: parseInt(document.getElementById("workExperience").value, 10),
+                previousJobs: document.getElementById("previousJobs").value,
+                referenceLetters: document.getElementById("referenceLetters").files[0] ? document.getElementById("referenceLetters").files[0].name : '',
+                projects: document.getElementById("projects").value,
+                hackathons: document.getElementById("hackathons").value,
+            };
+
+            try {
+                const response = await fetch("http://localhost:5500/register", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(formData),
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert(result.message); // Success message
+                    if (result.redirect) {
+                        window.location.href = result.redirect; // Redirect to login
+                    }
+                } else {
+                    alert(`Error: ${result.message}`); // Display error message
+                }
+            } catch (err) {
+                console.error("Error during registration:", err);
+                alert("Something went wrong. Please try again.");
+            }
+        });
+
+        // Toggle Password Visibility
+        document.getElementById("togglePassword").addEventListener("click", function () {
+            const passwordField = document.getElementById("password");
+            const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+            passwordField.setAttribute("type", type);
+            this.textContent = type === "password" ? "👁️" : "🙈";
+        });
+
+        document.getElementById("toggleConfirmPassword").addEventListener("click", function () {
+            const confirmPasswordField = document.getElementById("confirmPassword");
+            const type = confirmPasswordField.getAttribute("type") === "password" ? "text" : "password";
+            confirmPasswordField.setAttribute("type", type);
+            this.textContent = type === "password" ? "👁️" : "🙈";
+        });
+    </script>
+</body>
+</html>

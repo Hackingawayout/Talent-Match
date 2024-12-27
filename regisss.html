@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #d6e6f3, #efc4df);
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 600px;
+            background: #eaf7ff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        
+        .form-box {
+            text-align: center;
+        }
+        
+        .avatar img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 15px;
+        }
+        
+        .form-group {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        
+        .form-group input,
+        .form-group select {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+        
+        form button {
+            width: 100%;
+            padding: 10px;
+            background: #008cba;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        form button:hover {
+            background: #005f7f;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <div class="avatar">
+                <img src="https://via.placeholder.com/80" alt="Avatar">
+            </div>
+            <h2>Registration</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="+91 xxxxx xxxxx">
+                </div>
+                <div class="form-group">
+                    <select multiple>
+                        <option>Communication</option>
+                        <option>Teamwork</option>
+                        <option>Problem Solving</option>
+                        <option>Leadership</option>
+                        <option>Creativity</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select multiple>
+                        <option>Python</option>
+                        <option>JavaScript</option>
+                        <option>Java</option>
+                        <option>SQL</option>
+                        <option>HTML</option>
+                    </select>
+                    <input type="number" placeholder="Work Experience (Years)">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Previous Jobs">
+                    <input type="file">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Projects">
+                    <input type="text" placeholder="Hackathons">
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

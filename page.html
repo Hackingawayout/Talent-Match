@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Your Question</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Basic_query.css">
+    <link rel="icon" href="favicon1.jpg" type="image/jpg">
+    <style>
+        /* Existing styles */
+    </style>
+</head>
+<body>
+    <div class="navbar1">
+        <a href="home.html">Home</a>
+        <h1>TalentMatch</h1>
+        <a href="logout.html">Logout</a>
+    </div>
+
+    <div class="container">
+        <div class="navbar">    
+            <div class="left">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>  
+            </div>
+            <div class="right">
+                <a href="#"><i class="fas fa-users"></i>Skilled People</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="header">Ask Your Question</div>
+            <div class="question-mark">?</div>
+            <div class="search-bar">
+                <input type="text" id="queryInput" placeholder="Type your question here...">
+                <button onclick="submitQuestion()">Submit</button>
+            </div>
+            <div id="userDetails"></div>
+        </div>
+    </div>
+    <button class="back-button" onclick="goBack()">Back to Search</button>
+
+    <script>
+        function goBack() {
+            window.location.href = "search.html";
+        }
+
+        function submitQuestion() {
+            const query = document.getElementById("queryInput").value;
+            fetch(`/searchUsers?query=${query}`)
+                .then(response => response.json())
+                .then(data => {
+                    const userDetailsDiv = document.getElementById("userDetails");
+                    userDetailsDiv.innerHTML = ""; // Clear any previous results
+                    data.forEach(user => {
+                        const userCard = document.createElement("div");
+                        userCard.classList.add("user-card");
+                        userCard.innerHTML = `
+                            <h3>${user.name}</h3>
+                            <p><strong>Technical Skills:</strong> ${user.skills.join(", ")}</p>
+                            <p><strong>Projects:</strong> ${user.projects.join(", ")}</p>
+                            <p><strong>Work Experience:</strong> ${user.workExperience}</p>
+                        `;
+                        userDetailsDiv.appendChild(userCard);
+                    });
+                })
+                .catch(err => console.error("Error fetching user data:", err));
+        }
+    </script>
+</body>
+</html>
